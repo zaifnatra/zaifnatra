@@ -1,0 +1,40 @@
+name: Update Hiking README
+
+on:
+  schedule:
+    # Every Sunday at midnight UTC
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+    # Also allow manual trigger from the Actions tab
+
+jobs:
+  update-hike:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to push the README change back
+
+    steps:
+      - name: Checkout profile repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No extra deps needed — script uses stdlib only (urllib, re, json, etc.)
+
+      - name: Run hike updater
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME }}
+        run: python scripts/update_hike.py
+
+      - name: Commit & push updated README
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          # Only commit if something actually changed
+          git diff --cached --quiet || git commit -m "chore: update hiking stats [skip ci]"
+          git push
