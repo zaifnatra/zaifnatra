@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 110" width="800" height="110">
+  <rect width="800" height="110" fill="#0d1810"/>
+  <polygon points="0,85 70,42 140,85"    fill="#182d1e"/>
+  <polygon points="90,85 180,28 270,85"  fill="#1c3423"/>
+  <polygon points="210,85 310,18 410,85" fill="#182d1e"/>
+  <polygon points="360,85 455,32 550,85" fill="#1c3423"/>
+  <polygon points="500,85 595,20 690,85" fill="#182d1e"/>
+  <polygon points="640,85 720,38 800,85" fill="#1c3423"/>
+  <polygon points="20,85  65,52  110,85"  fill="#22452a"/>
+  <polygon points="100,85 155,40 210,85"  fill="#274e30"/>
+  <polygon points="195,85 255,46 315,85"  fill="#22452a"/>
+  <polygon points="305,85 370,36 435,85"  fill="#274e30"/>
+  <polygon points="425,85 485,44 545,85"  fill="#22452a"/>
+  <polygon points="535,85 598,38 661,85"  fill="#274e30"/>
+  <polygon points="645,85 705,50 765,85"  fill="#22452a"/>
+  <polygon points="740,85 785,42 800,85"  fill="#274e30"/>
+  <polygon points="0,85   32,62   64,85"  fill="#193820"/>
+  <polygon points="55,85  92,56  129,85"  fill="#1e4226"/>
+  <polygon points="125,85 168,58 211,85"  fill="#193820"/>
+  <polygon points="215,85 262,50 309,85"  fill="#1e4226"/>
+  <polygon points="315,85 358,60 401,85"  fill="#193820"/>
+  <polygon points="405,85 450,53 495,85"  fill="#1e4226"/>
+  <polygon points="500,85 545,56 590,85"  fill="#193820"/>
+  <polygon points="595,85 640,48 685,85"  fill="#1e4226"/>
+  <polygon points="685,85 730,60 775,85"  fill="#193820"/>
+  <polygon points="760,85 790,64 800,85"  fill="#1e4226"/>
+  <rect x="0" y="85" width="800" height="25" fill="#111e14"/>
+  <circle cx="700" cy="20" r="11" fill="#0d1810"/>
+  <circle cx="706" cy="20" r="11" fill="#b8cca0" opacity="0.12"/>
+  <text x="400" y="72" text-anchor="middle" font-family="monospace" font-size="10"
+        fill="#4d7a52" letter-spacing="5" opacity="0.9">trails not taken</text>
+</svg>
