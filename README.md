@@ -13,19 +13,10 @@ _____/      \__/                \____
 
 ---
 
-### hey, I'm Zaif
+### hey, I'm huzaifa
 
-Engineering student at Concordia University in Montréal.
-I build things at the intersection of software and mechanical systems —
-surrogate models, load-tested backends, and the occasional hackathon sprint.
-
-**Currently:** MECH 390 · SOEN 363 · whatever MLH throws at me next
-
----
-
-### tools I reach for
-
-`Python` `PyTorch` `PostgreSQL` `Docker` `C` `MATLAB`
+Software Engineering student at Concordia University in Montréal.
+I vibe code things
 
 ---
 
@@ -36,16 +27,6 @@ surrogate models, load-tested backends, and the occasional hackathon sprint.
 
 <sub>1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
-
----
-
-### a few things I've shipped
-
-| Project | What it does |
-|---------|-------------|
-| ANN Surrogate Model | PyTorch network approximating torque/volume tradeoffs for a Whitworth mechanism |
-| PE Hackathon (Silver) | Horizontal Docker scaling + Nginx load balancing, verified with k6 at 200 users |
-| SOEN 363 A2 | Multi-dataset cleaning & querying pipeline in Pandas with a LaTeX report |
 
 ---
 
