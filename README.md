@@ -1,15 +1,3 @@
-<!-- Profile header -->
-<div align="center">
-
-```
-        /\        /\        /\
-       /  \      /  \  /\  /  \
-      /    \    /    \/  \/    \
-_____/      \__/                \____
-          t r a i l s  n o t  t a k e n
-```
-
-</div>
 
 ---
 
