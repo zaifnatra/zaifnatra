@@ -16,44 +16,115 @@ from datetime import datetime, timedelta, timezone
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
-GITHUB_TOKEN = os.environ["GH_TOKEN"]          # set as Actions secret
-GITHUB_USERNAME = os.environ["GH_USERNAME"]    # e.g. "zaif123"
+GITHUB_TOKEN = os.environ["GH_TOKEN"]
+GITHUB_USERNAME = os.environ["GH_USERNAME"]
 README_PATH = os.path.join(os.path.dirname(__file__), "..", "README.md")
-LINES_PER_KM = 50                              # tune this however you like
+LINES_PER_KM = 50
 
 # ---------------------------------------------------------------------------
-# Trail library
-# Each entry: (min_km, max_km, name, region, description, elevation_m, tag)
+# Trail library — Québec, Eastern Canada, Adirondacks
+# Each entry: (min_km, max_km, name, region, description, elevation_m)
 # ---------------------------------------------------------------------------
 TRAILS = [
-    (0,   5,   "Parc du Mont-Royal loop",        "Montréal, QC",       "a lazy lap around the mountain — practically a coffee run",                          80,   "urban stroll"),
-    (5,   12,  "Sentier de la Rivière-à-Simon",   "Laurentians, QC",    "a quiet riverside trail north of the city",                                          120,  "easy day hike"),
-    (12,  22,  "Corridor Aérobique segment",       "Laurentians, QC",    "a slice of Québec's classic multi-use trail through the pines",                      200,  "day hike"),
-    (22,  35,  "Mont Orford summit loop",          "Estrie, QC",         "a proper summit scramble in the Eastern Townships",                                   853,  "half-day summit"),
-    (35,  55,  "Mont Tremblant backcountry",       "Laurentians, QC",    "through old-growth forest to Québec's highest Laurentian peak",                      968,  "full-day alpine"),
-    (55,  80,  "Tour du Mont-Mégantic",            "Estrie, QC",         "circling a dark-sky reserve and an actual astronomical observatory",                  1105, "overnight route"),
-    (80,  120, "Sentier des Caps de Charlevoix",   "Charlevoix, QC",     "cliff-edge trails above the St. Lawrence — some of Québec's best views",             600,  "2-day route"),
-    (120, 170, "Tour du Mont Blanc (partial)",     "Alps, FR/IT/CH",     "through three countries along the flank of Western Europe's highest peak",           2500, "multi-day alpine"),
-    (170, 230, "GR 20 — Corsica (north half)",    "Corsica, FR",        "the hardest long-distance trail in Europe — granite ridges and wild descent",        2706, "expert alpine"),
-    (230, 320, "Haute Route Chamonix–Zermatt",    "Alps, FR/CH",        "the classic glacier traverse from Mont Blanc to the Matterhorn",                     3100, "glacier haute route"),
-    (320, 450, "Tour des Écrins",                 "Hautes-Alpes, FR",   "a full loop around the wildest massif in the French Alps",                           3200, "remote alpine circuit"),
-    (450, 600, "GR 10 — Pyrenees traverse",       "Pyrenees, FR",       "the full length of the French Pyrenees, Atlantic to Mediterranean",                  3298, "thru-hike"),
-    (600, 900, "Te Araroa (North Island)",         "New Zealand",        "from Cape Reinga to Wellington — through geothermal plains and volcanic peaks",       1967, "thru-hike"),
-    (900, 9999,"Pacific Crest Trail (NorCal)",     "California, USA",    "the legendary spine of the Sierra Nevada — meadows, granite, sky",                   4317, "legendary thru-hike"),
+    # Short — local Québec
+    (0,   5,   "Parc du Mont-Royal loop",               "Montréal, QC",          "a lap around the mountain — practically a coffee run",                                      233),
+    (5,   10,  "Sentier du Belvédère, Mont Saint-Bruno", "Montérégie, QC",        "through maple forest above the St. Lawrence plain",                                         218),
+    (10,  18,  "Sentier des Contreforts segment",        "Laurentians, QC",       "rolling hardwood hills north of the city",                                                  420),
+    (18,  28,  "Mont Orford summit loop",                "Estrie, QC",            "a proper summit scramble in the Eastern Townships",                                         853),
+    (28,  40,  "Sentier de la Rivière-du-Nord",          "Laurentians, QC",       "following the river north through cedar and birch",                                         350),
+    (40,  55,  "Mont Tremblant backcountry loop",        "Laurentians, QC",       "through old-growth forest to Québec's highest Laurentian peak",                             968),
+    (55,  75,  "Tour du Mont-Mégantic",                  "Estrie, QC",            "circling a dark-sky reserve and an astronomical observatory",                              1105),
+    (75,  100, "Sentier des Caps de Charlevoix",         "Charlevoix, QC",        "cliff-edge trails above the St. Lawrence with views that go on forever",                    600),
+    (100, 125, "Corridor Aérobique — full traverse",     "Laurentians, QC",       "Québec's classic multi-use trail threading the pines end to end",                          500),
+    (125, 155, "Parc de la Gaspésie — Mont Albert loop", "Gaspésie, QC",          "an arctic plateau above the treeline, caribou country",                                   1151),
+    (155, 200, "Sentier international des Appalaches (QC segment)", "Gaspésie, QC","the Québec leg of the International Appalachian Trail along dramatic ridgelines",         1268),
+    # Adirondacks
+    (0,   7,   "Cascade Mountain",                      "Adirondacks, NY",       "the most-climbed High Peak — a short push to an open rocky summit",                       1295),
+    (7,   16,  "Giant Mountain loop",                   "Adirondacks, NY",       "above treeline with long views over Lake Champlain and into Québec",                      1412),
+    (16,  27,  "Marcy Dam to Avalanche Lake",            "Adirondacks, NY",       "through a glacial gorge to one of the Adirondacks' most dramatic spots",                   880),
+    (27,  42,  "Mount Marcy via Van Hoevenberg",         "Adirondacks, NY",       "the highest point in New York — above the clouds on a clear day",                         1629),
+    (42,  62,  "Algonquin and Wright Peak loop",         "Adirondacks, NY",       "two High Peaks in one push — alpine meadows and exposed ridgeline",                       1559),
+    (62,  95,  "Great Range Traverse",                   "Adirondacks, NY",       "the crown jewel of Adirondack hiking — seven peaks in a single day",                      1559),
+    (95,  135, "Northville–Placid Trail (south half)",   "Adirondacks, NY",       "through the remote Adirondack interior — wilderness ponds and boreal silence",             800),
+    (135, 185, "Northville–Placid Trail (full)",         "Adirondacks, NY",       "170 km of true backcountry from the southern foothills to Lake Placid",                    900),
+    # Longer regional routes
+    (185, 270, "Long Trail — Vermont (full)",            "Vermont, USA",          "the oldest long-distance trail in the US, end to end through the Green Mountains",        1340),
+    (270, 390, "Sentier national du Québec (central)",   "QC",                    "the spine of Québec's backcountry, deep into the Canadian Shield",                         900),
+    (390, 560, "International Appalachian Trail (full)", "QC / NB / NL",          "from the end of the Appalachians in Québec to the Strait of Belle Isle",                  1268),
+    (560, 9999,"Trans Canada Trail (QC section)",        "QC",                    "the longest trail network on Earth — a good chunk of it through Québec forest",            800),
 ]
 
-# Flavour copy for the "instead he shipped it" line
+# Flavour copy — no emojis
 GRIND_LINES = [
     "Instead, the IDE stayed open.",
     "The terminal won.",
-    "Hiking boots: dry. Keyboard: suffering.",
+    "Hiking boots: dry. Keyboard: worn.",
     "Nature will have to wait.",
-    "No blisters, just git blame.",
+    "No blisters. Just git blame.",
     "The mountains can wait one more week.",
-    "Commit streak > trail streak.",
+    "Commit streak holding. Trail streak paused.",
     "Elevation gained: 0 m. PRs merged: several.",
     "The only peak climbed was the call stack.",
+    "The forest is still there. It's patient.",
+    "Somewhere a trail sign is collecting dew.",
+    "The trees aren't going anywhere.",
 ]
+
+ON_TRAIL_LINES = [
+    "He's on the trails right now.",
+    "No commits. Probably somewhere in the Laurentians.",
+    "The boots are on. The laptop is not.",
+    "Gone hiking. Back Monday.",
+    "Out there earning the elevation.",
+    "Touch grass: status confirmed.",
+    "The forest won this week.",
+    "No lines written. Many steps taken.",
+]
+
+# ---------------------------------------------------------------------------
+# SVG forest banner — muted dark greens, pine silhouettes, no emojis
+# ---------------------------------------------------------------------------
+SVG_BANNER = '''<p align="center">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 110" width="800" height="110">
+  <rect width="800" height="110" fill="#0d1810"/>
+  <!-- back ridge -->
+  <polygon points="0,85 70,42 140,85"   fill="#182d1e"/>
+  <polygon points="90,85 180,28 270,85" fill="#1c3423"/>
+  <polygon points="210,85 310,18 410,85" fill="#182d1e"/>
+  <polygon points="360,85 455,32 550,85" fill="#1c3423"/>
+  <polygon points="500,85 595,20 690,85" fill="#182d1e"/>
+  <polygon points="640,85 720,38 800,85" fill="#1c3423"/>
+  <!-- mid layer -->
+  <polygon points="20,85  65,52  110,85"  fill="#22452a"/>
+  <polygon points="100,85 155,40 210,85"  fill="#274e30"/>
+  <polygon points="195,85 255,46 315,85"  fill="#22452a"/>
+  <polygon points="305,85 370,36 435,85"  fill="#274e30"/>
+  <polygon points="425,85 485,44 545,85"  fill="#22452a"/>
+  <polygon points="535,85 598,38 661,85"  fill="#274e30"/>
+  <polygon points="645,85 705,50 765,85"  fill="#22452a"/>
+  <polygon points="740,85 785,42 800,85"  fill="#274e30"/>
+  <!-- front trees -->
+  <polygon points="0,85   32,62   64,85"  fill="#193820"/>
+  <polygon points="55,85  92,56  129,85"  fill="#1e4226"/>
+  <polygon points="125,85 168,58 211,85"  fill="#193820"/>
+  <polygon points="215,85 262,50 309,85"  fill="#1e4226"/>
+  <polygon points="315,85 358,60 401,85"  fill="#193820"/>
+  <polygon points="405,85 450,53 495,85"  fill="#1e4226"/>
+  <polygon points="500,85 545,56 590,85"  fill="#193820"/>
+  <polygon points="595,85 640,48 685,85"  fill="#1e4226"/>
+  <polygon points="685,85 730,60 775,85"  fill="#193820"/>
+  <polygon points="760,85 790,64 800,85"  fill="#1e4226"/>
+  <!-- ground -->
+  <rect x="0" y="85" width="800" height="25" fill="#111e14"/>
+  <!-- faint crescent -->
+  <circle cx="700" cy="20" r="11" fill="#0d1810"/>
+  <circle cx="706" cy="20" r="11" fill="#b8cca0" opacity="0.12"/>
+  <!-- wordmark -->
+  <text x="400" y="72" text-anchor="middle"
+        font-family="monospace" font-size="10" fill="#4d7a52"
+        letter-spacing="5" opacity="0.9">trails not taken</text>
+</svg>
+</p>'''
 
 # ---------------------------------------------------------------------------
 # GitHub API helpers
@@ -78,7 +149,6 @@ def gh_get(url: str) -> dict | list:
 
 
 def get_repos() -> list[str]:
-    """Return full_names of repos owned by the user (up to 100)."""
     data = gh_get(
         f"https://api.github.com/users/{GITHUB_USERNAME}/repos"
         "?type=owner&sort=pushed&per_page=100"
@@ -87,16 +157,9 @@ def get_repos() -> list[str]:
 
 
 def lines_this_week(repos: list[str]) -> tuple[int, int, int]:
-    """
-    Returns (total_lines, additions, deletions) across all repos
-    for commits in the past 7 days authored by GITHUB_USERNAME.
-    Uses the /commits endpoint with since/until and sums stats.
-    """
     since = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%dT%H:%M:%SZ")
     until = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    total_add, total_del = 0, 0
-    commit_count = 0
+    total_add, total_del, commit_count = 0, 0, 0
 
     for repo in repos:
         commits = gh_get(
@@ -123,14 +186,10 @@ def lines_this_week(repos: list[str]) -> tuple[int, int, int]:
 
 
 def daily_breakdown(repos: list[str]) -> list[tuple[str, int]]:
-    """Returns (day_label, lines) for each day of the past 7 days."""
-    days = []
+    """Returns (full_day_name, lines) only for days where lines > 0."""
+    results = []
     for i in range(6, -1, -1):
         day = datetime.now(timezone.utc) - timedelta(days=i)
-        days.append(day)
-
-    results = []
-    for day in days:
         since = day.replace(hour=0, minute=0, second=0).strftime("%Y-%m-%dT%H:%M:%SZ")
         until = day.replace(hour=23, minute=59, second=59).strftime("%Y-%m-%dT%H:%M:%SZ")
         day_lines = 0
@@ -150,7 +209,8 @@ def daily_breakdown(repos: list[str]) -> list[tuple[str, int]]:
                     continue
                 stats = detail.get("stats", {})
                 day_lines += stats.get("additions", 0) + stats.get("deletions", 0)
-        results.append((day.strftime("%a"), day_lines))
+        if day_lines > 0:
+            results.append((day.strftime("%A"), day_lines))
 
     return results
 
@@ -160,33 +220,35 @@ def daily_breakdown(repos: list[str]) -> list[tuple[str, int]]:
 # ---------------------------------------------------------------------------
 
 def pick_trail(km: float) -> dict:
-    for min_km, max_km, name, region, desc, elev, tag in TRAILS:
+    for min_km, max_km, name, region, desc, elev in TRAILS:
         if min_km <= km < max_km:
-            return {"name": name, "region": region, "desc": desc, "elev": elev, "tag": tag}
-    # fallback: last entry
-    _, _, name, region, desc, elev, tag = TRAILS[-1]
-    return {"name": name, "region": region, "desc": desc, "elev": elev, "tag": tag}
+            return {"name": name, "region": region, "desc": desc, "elev": elev}
+    _, _, name, region, desc, elev = TRAILS[-1]
+    return {"name": name, "region": region, "desc": desc, "elev": elev}
 
 
-def pick_grind_line(lines: int) -> str:
+def pick_line(lines_list: list[str], seed_extra: str = "") -> str:
     import hashlib
-    week_str = datetime.now(timezone.utc).strftime("%Y-%W")
-    idx = int(hashlib.md5((week_str + str(lines)).encode()).hexdigest(), 16) % len(GRIND_LINES)
-    return GRIND_LINES[idx]
+    week_str = datetime.now(timezone.utc).strftime("%Y-%W") + seed_extra
+    idx = int(hashlib.md5(week_str.encode()).hexdigest(), 16) % len(lines_list)
+    return lines_list[idx]
 
 
 # ---------------------------------------------------------------------------
 # README rendering
 # ---------------------------------------------------------------------------
 
-def build_day_grid(breakdown: list[tuple[str, int]]) -> str:
+def build_day_table(breakdown: list[tuple[str, int]]) -> str:
+    if not breakdown:
+        return ""
+    max_lines = max(lines for _, lines in breakdown)
     rows = []
     for day, lines in breakdown:
         km = lines / LINES_PER_KM
-        bar_len = min(20, int(km / 3))  # scale: 3 km per block, max 20
-        bar = "█" * bar_len + "░" * (20 - bar_len)
-        rows.append(f"| {day:3s} | `{bar}` | {lines:,} lines | {km:.1f} km |")
-    header = "| Day | Activity | Lines | km |\n|-----|----------|-------|-----|"
+        bar_len = max(1, int((lines / max_lines) * 18))
+        bar = "█" * bar_len + "░" * (18 - bar_len)
+        rows.append(f"| {day:<9s} | `{bar}` | {lines:,} lines | {km:.1f} km |")
+    header = "| Day | | Lines | km |\n|-----|---|-------|-----|"
     return header + "\n" + "\n".join(rows)
 
 
@@ -194,37 +256,42 @@ def render_block(
     total_lines: int,
     km: float,
     trail: dict,
-    grind_line: str,
     breakdown: list[tuple[str, int]],
 ) -> str:
-    updated = datetime.now(timezone.utc).strftime("%B %d, %Y at %H:%M UTC")
-    goal_km = 80.0
-    pct = min(100, int(km / goal_km * 100))
-    progress_bar_len = 20
-    filled = int(pct / 100 * progress_bar_len)
-    progress = "█" * filled + "░" * (progress_bar_len - filled)
+    updated = datetime.now(timezone.utc).strftime("%B %d, %Y")
 
-    day_grid = build_day_grid(breakdown)
+    if total_lines == 0:
+        on_trail_msg = pick_line(ON_TRAIL_LINES)
+        return f"""<!-- HIKE:START -->
+{SVG_BANNER}
+
+### trails not taken
+
+> *{on_trail_msg}*
+
+<sub>checked {updated} · 1 km = {LINES_PER_KM} lines · [how this works](scripts/update_hike.py)</sub>
+<!-- HIKE:END -->"""
+
+    grind_line = pick_line(GRIND_LINES, seed_extra=str(total_lines))
+    day_table = build_day_table(breakdown)
+    table_section = f"\n{day_table}\n" if day_table else ""
 
     return f"""<!-- HIKE:START -->
-## 🥾 trails not taken this week
+{SVG_BANNER}
 
-> *{total_lines:,} lines committed. That's **{km:.1f} km** — {trail['desc']}.*
+### trails not taken
+
+> *{total_lines:,} lines this week. That's **{km:.1f} km** — {trail['desc']}.*
 > *{grind_line}*
 
 | | |
 |---|---|
-| **Trail** | {trail['name']} |
-| **Region** | {trail['region']} |
-| **Equivalent distance** | {km:.1f} km |
-| **Trail elevation** | {trail['elev']:,} m |
-| **Difficulty tag** | {trail['tag']} |
-
-**Weekly coding distance** `{progress}` {pct}% of {goal_km:.0f} km goal
-
-{day_grid}
-
-<sub>Updated {updated} · 1 km = {LINES_PER_KM} lines · [how this works](scripts/update_hike.py)</sub>
+| trail | {trail['name']} |
+| region | {trail['region']} |
+| distance equivalent | {km:.1f} km |
+| trail elevation | {trail['elev']:,} m |
+{table_section}
+<sub>updated {updated} · 1 km = {LINES_PER_KM} lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->"""
 
 
@@ -240,7 +307,6 @@ def update_readme(block: str) -> None:
     if re.search(pattern, content, re.DOTALL):
         new_content = re.sub(pattern, block, content, flags=re.DOTALL)
     else:
-        # Append if markers not found
         new_content = content.rstrip() + "\n\n" + block + "\n"
 
     with open(README_PATH, "w", encoding="utf-8") as f:
@@ -266,11 +332,10 @@ def main():
 
     km = total_lines / LINES_PER_KM
     trail = pick_trail(km)
-    grind_line = pick_grind_line(total_lines)
 
-    print(f"Total: {total_lines:,} lines = {km:.1f} km → {trail['name']}")
+    print(f"Total: {total_lines:,} lines = {km:.1f} km -> {trail['name']}")
 
-    block = render_block(total_lines, km, trail, grind_line, breakdown)
+    block = render_block(total_lines, km, trail, breakdown)
     update_readme(block)
 
 
