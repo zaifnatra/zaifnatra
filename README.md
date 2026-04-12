@@ -14,23 +14,21 @@ I build things (vibecode)
 
 ### trails not taken
 
-> *20,456 lines this week. That's **409.1 km** — from the end of the Appalachians in Québec to the Strait of Belle Isle.*
-> *Hiking boots: dry. Keyboard: worn.*
+> *3,011 lines this week. That's **60.2 km** — circling a dark-sky reserve and an astronomical observatory.*
+> *Commit streak holding. Trail streak paused.*
 
 | | |
 |---|---|
-| trail | International Appalachian Trail (full) |
-| region | QC / NB / NL |
-| distance equivalent | 409.1 km |
-| trail elevation | 1,268 m |
+| trail | Tour du Mont-Mégantic |
+| region | Estrie, QC |
+| distance equivalent | 60.2 km |
+| trail elevation | 1,105 m |
 
 | Day | | Lines | km |
 |-----|---|-------|-----|
-| Saturday  | `██████████████████` | 13,370 lines | 267.4 km |
-| Sunday    | `██████░░░░░░░░░░░░` | 5,161 lines | 103.2 km |
-| Monday    | `██░░░░░░░░░░░░░░░░` | 1,925 lines | 38.5 km |
+| Monday    | `██████████████████` | 1,925 lines | 38.5 km |
 
-<sub>updated April 06, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>updated April 12, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
