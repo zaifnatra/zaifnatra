@@ -14,9 +14,21 @@ I build things (vibecode)
 
 ### trails not taken
 
-> *The forest won this week.*
+> *3,688 lines this week. That's **73.8 km** — circling a dark-sky reserve and an astronomical observatory.*
+> *Hiking boots: dry. Keyboard: worn.*
 
-<sub>checked April 19, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+| | |
+|---|---|
+| trail | Tour du Mont-Mégantic |
+| region | Estrie, QC |
+| distance equivalent | 73.8 km |
+| trail elevation | 1,105 m |
+
+| Day | | Lines | km |
+|-----|---|-------|-----|
+| Thursday  | `██████████████████` | 3,688 lines | 73.8 km |
+
+<sub>updated April 26, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
