@@ -14,9 +14,9 @@ I build things (vibecode)
 
 ### trails not taken
 
-> *No commits. Probably somewhere in the Laurentians.*
+> *The boots are on. The laptop is not.*
 
-<sub>checked May 03, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>checked May 10, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
