@@ -14,9 +14,9 @@ I build things (vibecode)
 
 ### trails not taken
 
-> *The boots are on. The laptop is not.*
+> *The forest won this week.*
 
-<sub>checked May 10, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>checked May 17, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
