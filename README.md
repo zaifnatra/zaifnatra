@@ -4,7 +4,6 @@
 ### hey, I'm Zaif
 
 Software Engineering student at Concordia University in Montréal.
-I build things (vibecode)
 
 
 ---
