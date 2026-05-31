@@ -13,21 +13,9 @@ Software Engineering student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *1 lines this week. That's **0.0 km** — a lap around the mountain — practically a coffee run.*
-> *Somewhere a trail sign is collecting dew.*
+> *He's on the trails right now.*
 
-| | |
-|---|---|
-| trail | Parc du Mont-Royal loop |
-| region | Montréal, QC |
-| distance equivalent | 0.0 km |
-| trail elevation | 233 m |
-
-| Day | | Lines | km |
-|-----|---|-------|-----|
-| Monday    | `██████████████████` | 1 lines | 0.0 km |
-
-<sub>updated May 24, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>checked May 31, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
