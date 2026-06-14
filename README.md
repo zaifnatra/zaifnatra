@@ -13,22 +13,21 @@ Software Engineering student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *263 lines this week. That's **5.3 km** — through maple forest above the St. Lawrence plain.*
-> *Commit streak holding. Trail streak paused.*
+> *15 lines this week. That's **0.3 km** — a lap around the mountain — practically a coffee run.*
+> *Nature will have to wait.*
 
 | | |
 |---|---|
-| trail | Sentier du Belvédère, Mont Saint-Bruno |
-| region | Montérégie, QC |
-| distance equivalent | 5.3 km |
-| trail elevation | 218 m |
+| trail | Parc du Mont-Royal loop |
+| region | Montréal, QC |
+| distance equivalent | 0.3 km |
+| trail elevation | 233 m |
 
 | Day | | Lines | km |
 |-----|---|-------|-----|
-| Thursday  | `██████████████████` | 247 lines | 4.9 km |
-| Friday    | `█░░░░░░░░░░░░░░░░░` | 16 lines | 0.3 km |
+| Monday    | `██████████████████` | 15 lines | 0.3 km |
 
-<sub>updated June 07, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>updated June 14, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
