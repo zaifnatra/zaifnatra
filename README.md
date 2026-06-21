@@ -13,21 +13,23 @@ Software Engineering student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *15 lines this week. That's **0.3 km** — a lap around the mountain — practically a coffee run.*
-> *Nature will have to wait.*
+> *1,597 lines this week. That's **31.9 km** — following the river north through cedar and birch.*
+> *Hiking boots: dry. Keyboard: worn.*
 
 | | |
 |---|---|
-| trail | Parc du Mont-Royal loop |
-| region | Montréal, QC |
-| distance equivalent | 0.3 km |
-| trail elevation | 233 m |
+| trail | Sentier de la Rivière-du-Nord |
+| region | Laurentians, QC |
+| distance equivalent | 31.9 km |
+| trail elevation | 350 m |
 
 | Day | | Lines | km |
 |-----|---|-------|-----|
-| Monday    | `██████████████████` | 15 lines | 0.3 km |
+| Tuesday   | `█████████████░░░░░` | 448 lines | 9.0 km |
+| Wednesday | `█████████████████░` | 568 lines | 11.4 km |
+| Friday    | `██████████████████` | 581 lines | 11.6 km |
 
-<sub>updated June 14, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>updated June 21, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
