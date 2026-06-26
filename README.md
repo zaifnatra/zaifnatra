@@ -3,7 +3,7 @@
 
 ### hey, I'm Zaif
 
-Software Engineering student at Concordia University in Montréal.
+Incoming SWE @ Shopify. Student at Concordia University in Montréal.
 
 
 ---
