@@ -13,23 +13,24 @@ Incoming SWE @ Shopify. Student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *1,597 lines this week. That's **31.9 km** — following the river north through cedar and birch.*
-> *Hiking boots: dry. Keyboard: worn.*
+> *12,947 lines this week. That's **258.9 km** — the oldest long-distance trail in the US, end to end through the Green Mountains.*
+> *Commit streak holding. Trail streak paused.*
 
 | | |
 |---|---|
-| trail | Sentier de la Rivière-du-Nord |
-| region | Laurentians, QC |
-| distance equivalent | 31.9 km |
-| trail elevation | 350 m |
+| trail | Long Trail — Vermont (full) |
+| region | Vermont, USA |
+| distance equivalent | 258.9 km |
+| trail elevation | 1,340 m |
 
 | Day | | Lines | km |
 |-----|---|-------|-----|
-| Tuesday   | `█████████████░░░░░` | 448 lines | 9.0 km |
-| Wednesday | `█████████████████░` | 568 lines | 11.4 km |
-| Friday    | `██████████████████` | 581 lines | 11.6 km |
+| Tuesday   | `█░░░░░░░░░░░░░░░░░` | 30 lines | 0.6 km |
+| Friday    | `█░░░░░░░░░░░░░░░░░` | 263 lines | 5.3 km |
+| Saturday  | `██████████████████` | 10,632 lines | 212.6 km |
+| Sunday    | `███░░░░░░░░░░░░░░░` | 2,022 lines | 40.4 km |
 
-<sub>updated June 21, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>updated June 28, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
