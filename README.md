@@ -13,23 +13,22 @@ Incoming SWE @ Shopify. Student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *21,184 lines this week. That's **423.7 km** — from the end of the Appalachians in Québec to the Strait of Belle Isle.*
-> *The forest is still there. It's patient.*
+> *379 lines this week. That's **7.6 km** — through maple forest above the St. Lawrence plain.*
+> *Hiking boots: dry. Keyboard: worn.*
 
 | | |
 |---|---|
-| trail | International Appalachian Trail (full) |
-| region | QC / NB / NL |
-| distance equivalent | 423.7 km |
-| trail elevation | 1,268 m |
+| trail | Sentier du Belvédère, Mont Saint-Bruno |
+| region | Montérégie, QC |
+| distance equivalent | 7.6 km |
+| trail elevation | 218 m |
 
 | Day | | Lines | km |
 |-----|---|-------|-----|
-| Tuesday   | `█░░░░░░░░░░░░░░░░░` | 890 lines | 17.8 km |
-| Wednesday | `█░░░░░░░░░░░░░░░░░` | 901 lines | 18.0 km |
-| Thursday  | `██████████████████` | 17,373 lines | 347.5 km |
+| Tuesday   | `██████████████░░░░` | 169 lines | 3.4 km |
+| Thursday  | `██████████████████` | 210 lines | 4.2 km |
 
-<sub>updated July 05, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>updated July 12, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
