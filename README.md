@@ -13,21 +13,23 @@ Incoming SWE @ Shopify. Student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *823 lines this week. That's **16.5 km** — rolling hardwood hills north of the city.*
-> *No blisters. Just git blame.*
+> *14,585 lines this week. That's **291.7 km** — the spine of Québec's backcountry, deep into the Canadian Shield.*
+> *Hiking boots: dry. Keyboard: worn.*
 
 | | |
 |---|---|
-| trail | Sentier des Contreforts segment |
-| region | Laurentians, QC |
-| distance equivalent | 16.5 km |
-| trail elevation | 420 m |
+| trail | Sentier national du Québec (central) |
+| region | QC |
+| distance equivalent | 291.7 km |
+| trail elevation | 900 m |
 
 | Day | | Lines | km |
 |-----|---|-------|-----|
-| Tuesday   | `██████████████████` | 823 lines | 16.5 km |
+| Monday    | `█░░░░░░░░░░░░░░░░░` | 73 lines | 1.5 km |
+| Wednesday | `██████████████████` | 13,480 lines | 269.6 km |
+| Saturday  | `█░░░░░░░░░░░░░░░░░` | 1,032 lines | 20.6 km |
 
-<sub>updated July 26, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>updated August 02, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
