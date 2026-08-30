@@ -13,21 +13,9 @@ Incoming SWE @ Shopify. Student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *1,324 lines this week. That's **26.5 km** — a proper summit scramble in the Eastern Townships.*
-> *No blisters. Just git blame.*
+> *Touch grass: status confirmed.*
 
-| | |
-|---|---|
-| trail | Mont Orford summit loop |
-| region | Estrie, QC |
-| distance equivalent | 26.5 km |
-| trail elevation | 853 m |
-
-| Day | | Lines | km |
-|-----|---|-------|-----|
-| Monday    | `██████████████████` | 1,324 lines | 26.5 km |
-
-<sub>updated August 23, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>checked August 30, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
