@@ -13,9 +13,9 @@ Incoming SWE @ Shopify. Student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *Touch grass: status confirmed.*
+> *He's on the trails right now.*
 
-<sub>checked August 30, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>checked September 06, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
