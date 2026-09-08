@@ -3,7 +3,7 @@
 
 ### hey, I'm Zaif
 
-Incoming SWE @ Shopify. Student at Concordia University in Montréal.
+SWE Intern @ Shopify. Student at Concordia University in Montréal.
 
 
 ---
