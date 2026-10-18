@@ -13,9 +13,9 @@ SWE Intern @ Shopify. Student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *Out there earning the elevation.*
+> *Touch grass: status confirmed.*
 
-<sub>checked October 11, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>checked October 18, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
