@@ -13,9 +13,9 @@ SWE Intern @ Shopify. Student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *No commits. Probably somewhere in the Laurentians.*
+> *The boots are on. The laptop is not.*
 
-<sub>checked November 01, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>checked November 08, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
