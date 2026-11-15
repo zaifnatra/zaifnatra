@@ -13,9 +13,21 @@ SWE Intern @ Shopify. Student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *The boots are on. The laptop is not.*
+> *14 lines this week. That's **0.3 km** — a lap around the mountain — practically a coffee run.*
+> *Elevation gained: 0 m. PRs merged: several.*
 
-<sub>checked November 08, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+| | |
+|---|---|
+| trail | Parc du Mont-Royal loop |
+| region | Montréal, QC |
+| distance equivalent | 0.3 km |
+| trail elevation | 233 m |
+
+| Day | | Lines | km |
+|-----|---|-------|-----|
+| Sunday    | `██████████████████` | 14 lines | 0.3 km |
+
+<sub>updated November 15, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
