@@ -13,21 +13,23 @@ SWE Intern @ Shopify. Student at Concordia University in Montréal.
 
 ### trails not taken
 
-> *14 lines this week. That's **0.3 km** — a lap around the mountain — practically a coffee run.*
-> *Elevation gained: 0 m. PRs merged: several.*
+> *32,203 lines this week. That's **644.1 km** — the longest trail network on Earth — a good chunk of it through Québec forest.*
+> *Instead, the IDE stayed open.*
 
 | | |
 |---|---|
-| trail | Parc du Mont-Royal loop |
-| region | Montréal, QC |
-| distance equivalent | 0.3 km |
-| trail elevation | 233 m |
+| trail | Trans Canada Trail (QC section) |
+| region | QC |
+| distance equivalent | 644.1 km |
+| trail elevation | 800 m |
 
 | Day | | Lines | km |
 |-----|---|-------|-----|
-| Sunday    | `██████████████████` | 14 lines | 0.3 km |
+| Wednesday | `██████████████████` | 28,573 lines | 571.5 km |
+| Thursday  | `█░░░░░░░░░░░░░░░░░` | 1,861 lines | 37.2 km |
+| Friday    | `█░░░░░░░░░░░░░░░░░` | 1,769 lines | 35.4 km |
 
-<sub>updated November 15, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
+<sub>updated November 22, 2026 · 1 km = 50 lines · [how this works](scripts/update_hike.py)</sub>
 <!-- HIKE:END -->
 
 
